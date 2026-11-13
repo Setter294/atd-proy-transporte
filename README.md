@@ -1,3 +1,6 @@
+![Banner del proyecto](./assets/banner.png)
+
+
 # Transporte público en tiempo real: Valencia, Madrid y Barcelona
 
 Proyecto de **Adquisición y Transmisión de Datos** (Grado en Ciencia de Datos, UPV).

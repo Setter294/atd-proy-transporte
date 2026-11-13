@@ -5,6 +5,16 @@ Obtiene en tiempo real las bicis compartidas, los autobuses y el metro de tres c
 usando solo lo visto en clase: `requests` y `BeautifulSoup` para la adquisición, y cadenas, `re`,
 `datetime` y `pandas` para el filtrado.
 
+<div align="center">
+
+![Licencia](https://shields.io)
+![Estado](https://shields.io)
+![Python](https://shields.io)
+![GitHub](https://shields.io)
+
+</div>
+
+
 ## Flujo
 
 ```

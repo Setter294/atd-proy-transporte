@@ -1,4 +1,4 @@
-"""El tiempo en Valencia: temperatura y si llueve, con la API de Open-Meteo (gratis y sin clave).
+"""El tiempo en cada ciudad: temperatura y si llueve, con la API de Open-Meteo (gratis y sin clave).
 
 Solo usa lo visto en clase: requests (GET, parámetros, JSON).
 Ejecutar:  python3 tiempo.py
@@ -9,13 +9,17 @@ import requests
 
 URL = "https://api.open-meteo.com/v1/forecast"
 
+# Centro de cada ciudad (su ayuntamiento): latitud y longitud.
+COORDENADAS = {"Valencia": (39.4699, -0.3763), "Madrid": (40.4153, -3.7074), "Barcelona": (41.3826, 2.1771)}
+
 # Códigos del tiempo (estándar WMO) que significan llovizna, lluvia, chubascos o tormenta.
 CODIGOS_LLUVIA = list(range(51, 68)) + list(range(80, 83)) + list(range(95, 100))
 
 
-def tiempo():
+def tiempo(ciudad="Valencia"):
+    latitud, longitud = COORDENADAS[ciudad]
     parametros = {
-        "latitude": 39.4699, "longitude": -0.3763,           # plaza del Ayuntamiento de Valencia
+        "latitude": latitud, "longitude": longitud,
         "current": "temperature_2m,precipitation,weather_code",
         "timezone": "Europe/Madrid",
     }
@@ -38,7 +42,7 @@ def tiempo():
 
 # ============================================================ prueba
 if __name__ == "__main__":
-    t = tiempo()
+    t = tiempo("Valencia")
     if t:
         print(f"Valencia a las {t['hora']:%H:%M}: {t['temperatura']} °C, "
               f"{t['precipitacion']} mm, código {t['codigo']}")

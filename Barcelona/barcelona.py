@@ -51,7 +51,7 @@ def bicing():
     estaciones = []
     for s in estado["data"]["stations"]:
         estaciones.append({
-            "nombre": nombres.get(s["station_id"]),
+            "id": s["station_id"], "nombre": nombres.get(s["station_id"]),
             "bicis": s["num_bikes_available"], "anclajes_libres": s["num_docks_available"],
             "actualizado": datetime.fromtimestamp(s["last_reported"]),   # segundos desde 1970
         })

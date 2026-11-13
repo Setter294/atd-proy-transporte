@@ -37,7 +37,7 @@ def valenbisi():
         if ahora - actualizado > timedelta(hours=1):
             continue
         estaciones.append({
-            "numero": p["number"], "nombre": p["name"],
+            "id": p["number"], "nombre": p["name"],
             "bicis": p["available"], "anclajes_libres": p["free"], "total": p["total"],
             "actualizado": actualizado, "latitud": latitud, "longitud": longitud,
         })

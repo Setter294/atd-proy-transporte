@@ -1,4 +1,4 @@
-![Banner del proyecto](.assets/image_9e4333f8.jpg)
+![Banner del proyecto](./assets/image_9e4333f8.jpg)
 
 
 # Transporte público en tiempo real: Valencia, Madrid y Barcelona
